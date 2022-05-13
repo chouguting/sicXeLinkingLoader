@@ -24,7 +24,7 @@ class Memory() {
     }
 
     override fun toString(): String {
-        var str = "\nMemory(startAddress=$startAddressHexString)\n"
+        var str = "Memory(startAddress=$startAddressHexString)\n"
         str += "address\t                      Contents\n"
         str += "=======      =========================================\n"
         var widthCounter = 0
@@ -89,7 +89,7 @@ class Memory() {
 
 
     fun createSpace(spaceSize: Int) {
-        memorySpace = Array(spaceSize) { ByteString("**") }
+        memorySpace = Array(spaceSize) { ByteString("..") }
     }
 
 
@@ -104,13 +104,13 @@ class ByteString() {
     }
 
     fun setByte(byteHexString: String) {
-        higherNibble = if (byteHexString[0] == '*') {
-            "*"
+        higherNibble = if (byteHexString[0] == '.') {
+            "."
         } else {
             byteHexString[0].uppercase()
         }
-        lowerNibble = if (byteHexString[1] == '*') {
-            "*"
+        lowerNibble = if (byteHexString[1] == '.') {
+            "."
         } else {
             byteHexString[1].uppercase()
         }

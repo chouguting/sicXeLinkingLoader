@@ -18,10 +18,10 @@ fun String.toDecimalInt(): Int {
 }
 
 fun MutableMap<String, Int>.toExternalSymbolTableString(): String {
-    var str = "\nExternalSymbolTable\nName\t  Address\n"
+    var str = "\nExternalSymbolTable\nName\t\tAddress\n"
     str += "==========================\n"
     for (indices in this) {
-        str += "${indices.key}\t\t${indices.value.toHexString().uppercase()}\n"
+        str += "${indices.key}\t\t0x${indices.value.toHexString().uppercase()}\n"
     }
     return str
 }

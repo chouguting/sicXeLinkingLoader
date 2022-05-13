@@ -6,7 +6,7 @@ class LinkingLoader(val memory: Memory, val allObjFilesStringList: List<List<Str
         val programAddress = memory.startAddressDecimal
         var controlSectionAddress = programAddress
 
-        println("programAddress$programAddress")
+        //println("programAddress$programAddress")
         //pass 1
         for (controlSectionStringList in allObjFilesStringList) {
             var controlSectionLength = 0
@@ -42,7 +42,7 @@ class LinkingLoader(val memory: Memory, val allObjFilesStringList: List<List<Str
 
         val programLength = controlSectionAddress - programAddress
         memory.createSpace(programLength)
-        println("programLength:${programLength}")
+        //println("programLength:${programLength}")
 
         println(externalSymbolTable.toExternalSymbolTableString())
 
