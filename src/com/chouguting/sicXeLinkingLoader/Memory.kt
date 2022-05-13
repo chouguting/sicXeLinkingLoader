@@ -65,7 +65,7 @@ class Memory() {
             stringToBeModified += memorySpace[locationCounter]
             locationCounter += 1
         }
-        //TODO:判斷正負
+
         val intToBeModified = if (stringToBeModified.hexIsNegative()) ((stringToBeModified.hexTwosComplement()
             .toDecimalInt()) * -1) else stringToBeModified.toDecimalInt()
         //val intToBeModified = stringToBeModified.toDecimalInt()
