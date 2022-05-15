@@ -32,7 +32,6 @@ fun String.hexIsNegative(): Boolean {
     return false
 }
 
-//TODO:二補數
 fun String.hexTwosComplement(): String {
     var binaryValue = Integer.toBinaryString(this.toDecimalInt()).toString()
     var complementString = ""

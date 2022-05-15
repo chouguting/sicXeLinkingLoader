@@ -49,7 +49,7 @@ class LinkingLoader(val memory: Memory, val allObjFilesStringList: List<List<Str
 
         //pass 2
         controlSectionAddress = programAddress
-        var executionAddress = programAddress //先不要
+        var executionAddress = programAddress
         for (controlSectionStringList in allObjFilesStringList) {
             var controlSectionLength = 0
             for (currentObjLine in controlSectionStringList) {
@@ -79,7 +79,7 @@ class LinkingLoader(val memory: Memory, val allObjFilesStringList: List<List<Str
             controlSectionAddress += controlSectionLength
         }
         println(memory)
-        println("execution point: ${executionAddress.toHexString().padStart(4, '0')}")
+        //println("\nexecution point: ${executionAddress.toHexString().padStart(4, '0')}")
     }
 
 }

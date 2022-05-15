@@ -25,8 +25,8 @@ class Memory() {
 
     override fun toString(): String {
         var str = "Memory(startAddress=$startAddressHexString)\n"
-        str += "address\t                      Contents\n"
-        str += "=======      =========================================\n"
+        str += "address\t\t                      Contents\n"
+        str += "=======\t\t======================================================\n"
         var widthCounter = 0
         var locationCounter = startAddressDecimal
         str += "${locationCounter.toHexString()}\t\t"
